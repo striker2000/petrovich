@@ -1,9 +1,8 @@
 package petrovich
 
-//go:generate go-bindata -pkg petrovich rules/rules.json
+//go:generate go run rules-generator/rules-generator.go
 
 import (
-	"encoding/json"
 	"strings"
 	"unicode/utf8"
 )
@@ -27,27 +26,16 @@ const (
 	Prepositional
 )
 
-var allRules rules
-
-func init() {
-	b := MustAsset("rules/rules.json")
-
-	err := json.Unmarshal(b, &allRules)
-	if err != nil {
-		panic(err)
-	}
-}
-
 func FirstName(name string, g Gender, c Case) string {
-	return inflect(name, g, c, allRules.FirstName)
+	return inflect(name, g, c, allRules.firstName)
 }
 
 func MiddleName(name string, g Gender, c Case) string {
-	return inflect(name, g, c, allRules.MiddleName)
+	return inflect(name, g, c, allRules.middleName)
 }
 
 func LastName(name string, g Gender, c Case) string {
-	return inflect(name, g, c, allRules.LastName)
+	return inflect(name, g, c, allRules.lastName)
 }
 
 func inflect(name string, g Gender, c Case, rg rulesGroup) string {
@@ -72,11 +60,11 @@ func inflect(name string, g Gender, c Case, rg rulesGroup) string {
 func checkException(name string, g Gender, c Case, rg rulesGroup) string {
 	ln := strings.ToLower(name)
 
-	for _, r := range rg.Exceptions {
-		if rg := r.getGender(); rg == Androgynous || rg == g {
-			for _, t := range r.Test {
-				if t == ln && len(r.Mods) > int(c) {
-					return applyRule(name, r.Mods[c])
+	for _, r := range rg.exceptions {
+		if r.gender == Androgynous || r.gender == g {
+			for _, t := range r.test {
+				if t == ln && len(r.mods) > int(c) {
+					return applyRule(name, r.mods[c])
 				}
 			}
 		}
@@ -86,11 +74,11 @@ func checkException(name string, g Gender, c Case, rg rulesGroup) string {
 }
 
 func findInRules(name string, g Gender, c Case, rg rulesGroup) string {
-	for _, r := range rg.Suffixes {
-		if rg := r.getGender(); rg == Androgynous || rg == g {
-			for _, t := range r.Test {
-				if strings.HasSuffix(name, t) && len(r.Mods) > int(c) {
-					return applyRule(name, r.Mods[c])
+	for _, r := range rg.suffixes {
+		if r.gender == Androgynous || r.gender == g {
+			for _, t := range r.test {
+				if strings.HasSuffix(name, t) && len(r.mods) > int(c) {
+					return applyRule(name, r.mods[c])
 				}
 			}
 		}
