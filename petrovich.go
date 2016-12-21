@@ -1,3 +1,4 @@
+// Package petrovich provides methods to inflect Russian first, last, and middle names.
 package petrovich
 
 //go:generate go run rules-generator/rules-generator.go
@@ -26,14 +27,17 @@ const (
 	Prepositional
 )
 
+// FirstName inflects first name depending on the given gender and case.
 func FirstName(name string, g Gender, c Case) string {
 	return inflect(name, g, c, allRules.firstName)
 }
 
+// MiddleName inflects middle name depending on the given gender and case.
 func MiddleName(name string, g Gender, c Case) string {
 	return inflect(name, g, c, allRules.middleName)
 }
 
+// LastName inflects last name depending on the given gender and case.
 func LastName(name string, g Gender, c Case) string {
 	return inflect(name, g, c, allRules.lastName)
 }
