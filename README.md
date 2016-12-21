@@ -1,4 +1,4 @@
-# petrovich
+![Petrovich](petrovich.png)
 
 Petrovich is the library which inflects Russian names to given grammatical case.
 
