@@ -1,4 +1,17 @@
-// Package petrovich provides methods to inflect Russian first, last, and middle names.
+// Package petrovich provides methods to inflect Russian first, last, and
+// middle names.
+//
+// This is the Go port of https://github.com/petrovich. All implementations use
+// common rules from https://github.com/petrovich/petrovich-rules.
+//
+// Usage:
+//
+//     n := petrovich.FirstName("Кузьма", petrovich.Male, petrovich.Genitive)
+//     fmt.Print(n) // "Кузьмы"
+//
+//     n = petrovich.LastName("Петров-Водкин", petrovich.Male, petrovich.Prepositional)
+//     fmt.Print(n) // "Петрове-Водкине"
+//
 package petrovich
 
 //go:generate go run rules-generator/rules-generator.go
