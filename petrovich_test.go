@@ -47,7 +47,7 @@ func TestFirstName(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		assert.Equal(t, c.name, FirstName(c.name, c.gender, Nomenative))
+		assert.Equal(t, c.name, FirstName(c.name, c.gender, Nominative))
 		for i, in := range c.infNames {
 			assert.Equal(t, in, FirstName(c.name, c.gender, Case(i)))
 		}
@@ -77,7 +77,7 @@ func TestMiddleName(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		assert.Equal(t, c.name, MiddleName(c.name, c.gender, Nomenative))
+		assert.Equal(t, c.name, MiddleName(c.name, c.gender, Nominative))
 		for i, in := range c.infNames {
 			assert.Equal(t, in, MiddleName(c.name, c.gender, Case(i)))
 		}
@@ -119,7 +119,7 @@ func TestLastName(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		assert.Equal(t, c.name, LastName(c.name, c.gender, Nomenative))
+		assert.Equal(t, c.name, LastName(c.name, c.gender, Nominative))
 		for i, in := range c.infNames {
 			assert.Equal(t, in, LastName(c.name, c.gender, Case(i)))
 		}

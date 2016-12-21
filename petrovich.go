@@ -32,7 +32,7 @@ const (
 type Case int
 
 const (
-	Nomenative Case = -1 + iota
+	Nominative Case = -1 + iota
 	Genitive
 	Dative
 	Accusative
@@ -56,7 +56,7 @@ func LastName(name string, g Gender, c Case) string {
 }
 
 func inflect(name string, g Gender, c Case, rg rulesGroup) string {
-	if c == Nomenative {
+	if c == Nominative {
 		return name
 	}
 
