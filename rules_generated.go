@@ -575,6 +575,22 @@ var allRules = rules{
 					"-е",
 				},
 			},
+			{
+				gender: Male,
+				test: []string{
+					"грин",
+					"дарвин",
+					"регин",
+					"цин",
+				},
+				mods: []string{
+					"а",
+					"у",
+					"а",
+					"ом",
+					"е",
+				},
+			},
 		},
 		suffixes: []rule{
 			{
