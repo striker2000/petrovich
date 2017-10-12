@@ -44,6 +44,12 @@ func TestFirstName(t *testing.T) {
 			"Машу",
 			"Машей",
 			"Маше"}},
+		{"John", Male, []string{
+			"John",
+			"John",
+			"John",
+			"John",
+			"John"}},
 	}
 
 	for _, c := range cases {
