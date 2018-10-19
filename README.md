@@ -6,7 +6,7 @@ This is the Go port of https://github.com/petrovich.
 
 [![GoDoc](https://godoc.org/github.com/striker2000/petrovich?status.svg)](https://godoc.org/github.com/striker2000/petrovich)
 [![Build Status](https://travis-ci.org/striker2000/petrovich.svg?branch=master)](https://travis-ci.org/striker2000/petrovich)
-[![cover.run go](https://cover.run/go/github.com/striker2000/petrovich.svg)](https://cover.run/go/github.com/striker2000/petrovich)
+[![Coverage Status](https://coveralls.io/repos/github/striker2000/petrovich/badge.svg?branch=master)](https://coveralls.io/github/striker2000/petrovich?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/striker2000/petrovich)](https://goreportcard.com/report/github.com/striker2000/petrovich)
 
 ## Installation
