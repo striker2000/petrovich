@@ -909,7 +909,6 @@ var allRules = rules{
 				gender: Male,
 				test: []string{
 					"ынец",
-					"овец",
 				},
 				mods: []string{
 					"--ца",
@@ -923,7 +922,7 @@ var allRules = rules{
 				gender: Male,
 				test: []string{
 					"нец",
-					"обец",
+					"робец",
 				},
 				mods: []string{
 					"--ца",
@@ -1048,6 +1047,22 @@ var allRules = rules{
 			{
 				gender: Male,
 				test: []string{
+					"обец",
+					"швец",
+					"ьвец",
+				},
+				mods: []string{
+					"а",
+					"у",
+					"а",
+					"ем",
+					"е",
+				},
+			},
+			{
+				gender: Male,
+				test: []string{
+					"аец",
 					"иец",
 					"еец",
 				},
@@ -1055,14 +1070,29 @@ var allRules = rules{
 					"--йца",
 					"--йцу",
 					"--йца",
-					"--йцом",
+					"--йцем",
 					"--йце",
 				},
 			},
 			{
 				gender: Male,
 				test: []string{
-					"ец",
+					"опец",
+				},
+				mods: []string{
+					"--ца",
+					"--цу",
+					"--ца",
+					"--цем",
+					"--це",
+				},
+			},
+			{
+				gender: Male,
+				test: []string{
+					"вец",
+					"убец",
+					"ырец",
 				},
 				mods: []string{
 					"--ца",
