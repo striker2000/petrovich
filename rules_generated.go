@@ -61,6 +61,19 @@ var allRules = rules{
 			{
 				gender: Male,
 				test: []string{
+					"илья",
+				},
+				mods: []string{
+					"-и",
+					"-е",
+					"-ю",
+					"-ёй",
+					"-е",
+				},
+			},
+			{
+				gender: Male,
+				test: []string{
 					"шота",
 				},
 				mods: []string{
@@ -248,19 +261,6 @@ var allRules = rules{
 			{
 				gender: Female,
 				test: []string{
-					"ия",
-				},
-				mods: []string{
-					"-и",
-					"-и",
-					"-ю",
-					"-ей",
-					"-и",
-				},
-			},
-			{
-				gender: Female,
-				test: []string{
 					"ка",
 					"га",
 					"ха",
@@ -302,19 +302,6 @@ var allRules = rules{
 			{
 				gender: Female,
 				test: []string{
-					"я",
-				},
-				mods: []string{
-					"-и",
-					"-е",
-					"-ю",
-					"-ей",
-					"-е",
-				},
-			},
-			{
-				gender: Male,
-				test: []string{
 					"ия",
 				},
 				mods: []string{
@@ -326,7 +313,7 @@ var allRules = rules{
 				},
 			},
 			{
-				gender: Male,
+				gender: Androgynous,
 				test: []string{
 					"я",
 				},
@@ -653,6 +640,32 @@ var allRules = rules{
 					"-ую",
 					"-ой",
 					"-ой",
+				},
+			},
+			{
+				gender: Female,
+				test: []string{
+					"чая",
+				},
+				mods: []string{
+					"--ей",
+					"--ей",
+					"--ую",
+					"--ей",
+					"--ей",
+				},
+			},
+			{
+				gender: Male,
+				test: []string{
+					"чий",
+				},
+				mods: []string{
+					"--его",
+					"--ему",
+					"--его",
+					"--им",
+					"--ем",
 				},
 			},
 			{
