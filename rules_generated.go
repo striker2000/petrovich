@@ -547,7 +547,7 @@ var allRules = rules{
 				},
 			},
 			{
-				gender: Androgynous,
+				gender: Male,
 				test: []string{
 					"вий",
 					"сой",
