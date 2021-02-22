@@ -355,6 +355,33 @@ var allRules = rules{
 			{
 				gender: Male,
 				test: []string{
+					"бек",
+				},
+				mods: []string{
+					"-ка",
+					"-ку",
+					"-ка",
+					"-ком",
+					"-ке",
+				},
+			},
+			{
+				gender: Male,
+				test: []string{
+					"ек",
+					"ёк",
+				},
+				mods: []string{
+					"--ька",
+					"--ьку",
+					"--ька",
+					"--ьком",
+					"--ьке",
+				},
+			},
+			{
+				gender: Male,
+				test: []string{
 					"ш",
 					"ж",
 				},
@@ -935,6 +962,7 @@ var allRules = rules{
 				gender: Male,
 				test: []string{
 					"нец",
+					"мец",
 					"робец",
 				},
 				mods: []string{
@@ -989,6 +1017,7 @@ var allRules = rules{
 				gender: Male,
 				test: []string{
 					"ах",
+					"ав",
 					"ив",
 					"шток",
 				},
@@ -1104,6 +1133,7 @@ var allRules = rules{
 				gender: Male,
 				test: []string{
 					"вец",
+					"сец",
 					"убец",
 					"ырец",
 				},
