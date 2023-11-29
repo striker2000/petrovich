@@ -101,6 +101,24 @@ var allRules = rules{
 					"-и",
 				},
 			},
+			{
+				gender: Female,
+				test: []string{
+					"алия",
+					"альфия",
+					"асия",
+					"галия",
+					"гульфия",
+					"зульфия",
+				},
+				mods: []string{
+					"-и",
+					"-е",
+					"-ю",
+					"-ёй",
+					"-е",
+				},
+			},
 		},
 		suffixes: []rule{
 			{
@@ -564,6 +582,7 @@ var allRules = rules{
 					"маненок",
 					"рева",
 					"кива",
+					"щёлок",
 				},
 				mods: []string{
 					".",
@@ -933,6 +952,7 @@ var allRules = rules{
 			{
 				gender: Male,
 				test: []string{
+					"рн",
 					"ян",
 					"ан",
 					"йн",
